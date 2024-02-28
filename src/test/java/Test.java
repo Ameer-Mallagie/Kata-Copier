@@ -76,21 +76,5 @@ public class Test {
             Mockito.verify(mockDestination, times(4)).WriteChar(anyChar()); // Verify any character was written 5 times
 
         }
-
-        @org.junit.jupiter.api.Test
-        public void testExceptionsAssert() throws Exception {
-
-            // Mockito stubbing. When the mockSource.ReadChar() method is called, return the following characters
-            Mockito.when(mockSource.ReadChar()).thenReturn('k', 'a', 't', 'a', '\n');
-
-            copier.Copy();
-
-            // Verify interactions with mocks
-
-            // ReadChar() is called supposed to be called 5 times
-            Mockito.verify(mockSource, times(4)).ReadChar();
-            // WriteChar() is supposed to be called 4 times because of the \n
-            Mockito.verify(mockDestination, times(4)).WriteChar(anyChar()); // Verify any character was written 5 times
-        }
     }
 }

@@ -21,13 +21,4 @@ public class Copier {
         }
     }
 
-    private int findNewlineIndex(char[] chars, int length) {
-        for (int i = 0; i < length; i++) {
-            if (chars[i] == '\n') {
-                return i;
-            }
-        }
-        return -1;
-    }
-
 }
