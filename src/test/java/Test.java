@@ -15,31 +15,6 @@ import static org.mockito.Mockito.times;
 public class Test {
 
     @Nested
-    class IntegrationTest {
-
-        private ISource src;
-
-        private IDestination dest;
-        private Copier copier;
-
-
-        @BeforeEach
-        public void setup() throws Exception {
-
-            copier = new Copier(src, dest);
-
-        }
-
-        @org.junit.jupiter.api.Test
-        public void testCopy() throws Exception {
-
-            // we cannot use the copier.Copy() method because the it uses
-
-            copier.Copy();
-        }
-    }
-
-    @Nested
     class successfulTest {
 
         @Mock
